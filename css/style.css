@@ -1,0 +1,893 @@
+/*====================== GLOBAL STYLES================================*/
+:root
+{
+    --color-dark:hsl(252,30%,17%);
+    --color-light:hsl(252,30%,95%);
+    --color-gray:hsl(252,15%,65%);
+    --color-primary:hsl(252,75%,60%);
+    --color-secondary:hsl(252,100%,90%);
+    --color-success:hsl(120,95%,65%);
+    --color-danger:hsl(0,95%,65%);
+    --color-white:hsl(252,30%,100%);
+    --color-black:hsl(252,30%,10%);
+
+
+    --border-radius:2rem;
+    --card-border-radius:1rem;
+    --btn-padding:0.6rem 2rem;
+    --search-padding:0.6rem 1rem;
+    --card-padding:1rem
+}
+::-webkit-scrollbar
+{
+    width: 1rem;
+}
+::-webkit-scrollbar-track
+{
+    background-color: var(--color-white);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--color-primary)
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    overflow-x: hidden;
+    height: 6000px;
+}
+
+.container
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profile-img 
+{
+    width: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+img 
+{
+    width: 100%;
+    display: block;
+}
+.btn 
+{
+    display: inline-block;
+    background: transparent;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+    border: none;
+}
+.btn:hover 
+{
+    opacity: 0.8;
+}
+.btn-primary
+{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+/*Small*/
+@media (min-width:768px)
+{
+    .container
+    {
+        width: 750px;
+    }
+}
+/*Medium*/
+@media (min-width:992px)
+{
+    .container
+    {
+        width: 970px;
+    }
+}
+/*Large*/
+@media (min-width:1200px)
+{
+    .container
+    {
+        width: 1170px;
+    }
+}
+/*XX-Large*/
+@media (min-width:1400px)
+{
+    .container
+    {
+        width: 1320px;
+    }
+}
+/*====================== NAV================================*/
+nav{
+    background-color: var(--color-white);
+    position: fixed;
+    padding: 0.7rem 0 ;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+}
+.nav__container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__container .logo 
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__container .search-middle-section
+{
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+
+}
+
+.nav__container .search-middle-section i 
+{
+    color: var(--color-gray);
+}
+.nav__container .search-middle-section input
+{
+    width: 30vw;
+    background-color: transparent;
+    color: var(--color-dark);
+    margin-left: 1rem;
+    font-size: .9rem;
+    border: none;
+    outline: none;
+}
+.nav__container .search-middle-section input::placeholder
+{
+    color: var(--color-gray);
+}
+
+
+.nav__container .right-section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+/*=============================MAIN================================*/
+main
+{
+    position: relative;
+    top: 6rem;
+}
+main .container 
+{
+    display: grid;
+    grid-template-columns: 18vw auto 20vw;
+    gap: 2rem;
+}
+main .container .left .left-heading
+{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    display: flex;
+align-items: center;
+gap: 1.5rem;
+}
+main .container .left .left-heading p {
+    color: var(--color-gray);
+    margin: .5rem 0;
+}
+main .container .left .sidebar
+{
+    margin: 1rem 0;
+    border-radius: var(--card-border-radius);
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+main .container .left .sidebar a 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    transition: all 300ms ease;
+    cursor: pointer;
+    padding: var(--card-padding) ;
+    position: relative;
+}
+
+main .container .left .sidebar a::before
+{
+    display: none;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background-color: var(--color-primary);
+    transition: all 300ms ease;
+} 
+main .container .left .sidebar a:first-of-type:before
+{
+
+    border-top-left-radius:1rem ;
+
+}
+main .container .left .sidebar a.active,
+main .container .left .sidebar a:hover 
+
+{
+    background-color:var(--color-light);
+    color: var(--color-primary);
+    border-top-left-radius:1rem ;
+} 
+main .container .left .sidebar a.active::before
+{
+    display: block;
+}
+
+main .sidebar a.notifications
+{
+    position: relative;
+}
+
+main .container .left .sidebar .notifications-container
+{
+    position: absolute;
+    right: -32rem;
+    width: 30rem;
+    top: 0;
+    z-index: 5;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 3rem ;
+    display: none;
+}
+main .container .left .sidebar .notifications-container::before
+{
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: .8rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-white);
+    transform: rotate(45deg);
+}
+main .sidebar a.notifications.active .notifications-container
+{
+    display: block;
+}
+
+main .container .left .sidebar .notifications-container .notification
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+main .container .left .sidebar .notifications-container .notification  h4 
+{
+    flex: 1;
+    color: var(--color-gray);
+}
+main .container .left .sidebar .notifications-container .notification  h4 span:first-of-type
+{
+    color: var(--color-dark);
+    margin-right:.3rem ;
+}
+
+main .container .left .sidebar .notifications-container .notification .time-accepted 
+{
+    display: block;
+    width: 100%;
+    color: var(--color-gray);
+    margin-top: .4rem;
+    font-size: .7rem;
+}
+main .container .left .sidebar  i 
+{
+    position: relative;
+}
+main .container .left .sidebar  i small
+{
+    position: absolute;
+    top: -10px;
+    left: 2px;
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    font-size: .5rem;
+    border-radius: var(--border-radius);
+    padding: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container .left   label
+{
+    width: 100%;
+    padding: .8rem ;
+    text-align: center;
+}
+
+main .middle .stories
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+main .middle .stories .story 
+{
+    position: relative;
+    width: 6.25rem
+   
+}
+main .middle .stories .story .profile-img
+{
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    width: 2.7rem;
+}
+main .middle .stories .story span
+{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-white);
+}
+
+
+main .middle .stories .story .story-img img 
+{
+    max-width: 100%;
+    border-radius: var(--border-radius);
+}
+
+main .middle .search
+{
+    background-color: var(--color-white);
+    display: flex;
+    padding: var(--search-padding);
+    border-radius: var(--border-radius);
+    position: relative;
+    margin: 1rem 0;
+
+}
+main .middle .search input 
+{
+    border: none ;
+    width: 100%;
+    outline: none;
+    
+}
+main .middle .search  label 
+{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .middle .search .profile-img
+{
+    margin-right: 1rem;
+}
+main .middle .posts-container
+{
+    color: var(--color-gray);
+}
+main .middle .posts-container .post
+{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-bottom: 2rem;
+}
+main .middle .posts-container .post .profile-info
+{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+main .middle .posts-container .post .profile-info .profile-img 
+{
+    width: 2.6rem;
+    margin: 0 0 1rem;
+}
+
+main .middle .posts-container .post .profile-info .name span 
+{
+    color: var(--color-gray);
+    font-size: .9rem;
+}
+main .middle .posts-container .post .profile-info h4 
+{
+    color: var(--color-dark);
+}
+main .middle .posts-container .post .profile-info .pin-post 
+{
+    flex: 1;
+    text-align: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+main .middle .posts-container .post  .state img 
+{
+    border-radius: var(--card-border-radius);
+}
+main .middle .posts-container .post .views-info
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+main .middle .posts-container .post .views-info i 
+{
+    cursor: pointer;
+}
+main .middle .posts-container .data-info
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+main .middle .posts-container .data-info .images 
+{
+    display: flex;
+    width: fit-content;
+}
+main .middle .posts-container .data-info .profile-img
+{
+    width: 1.3rem;
+}
+main .middle .posts-container .data-info .profile-img:nth-of-type(2)
+{
+    transform: translateX(-.5rem);
+}
+main .middle .posts-container .data-info .profile-img:nth-of-type(3)
+{
+    transform: translateX(-1rem);
+
+}
+main .middle .posts-container  .liked-sect 
+{
+    position: relative;
+    font-size: .9rem;
+    left: -1rem;
+    color: var(--color-gray);
+
+}
+main .middle .posts-container  .liked-sect span
+{
+    font-weight: bold;
+    margin: 0 .3rem;
+    color: var(--color-dark);
+}
+main .middle .posts-container .comment-info
+{
+    width: 100%;
+}
+main .middle .posts-container .comment-info .person-name 
+{
+    font-weight: bold;
+    margin-right: .3rem;
+    color: var(--color-dark);
+
+}
+main .middle .posts-container .comment-info p
+{
+    display: inline-block;
+
+}
+main .middle .posts-container .comment-info span:last-of-type
+{
+    display: block;
+    margin-top: .6rem;
+}
+main  .right .messages
+{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+}
+main  .right .messages .heading
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+main  .right .messages .search 
+{
+    background-color: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--border-radius);
+    margin-bottom:1rem ;
+}
+main  .right .messages .search input
+{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+
+main .right .message-category
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--color-light);
+} 
+main .right .message-category h4
+{
+    padding: 2rem 0;
+    cursor: pointer;
+}
+main .right .message-category h4.active
+{
+    border-bottom: 4px solid var(--color-black);
+
+}
+main .right .message 
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+main .right .message .profile-img
+{
+    position: relative;
+}
+
+main .right .messages .message-container .message:nth-of-type(2) .profile-img::before,
+main .right .messages .message-container .message:nth-of-type(5) .profile-img::before
+
+{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-success);
+    border: 3px solid var(--color-white);
+    bottom: 3px;
+    right: 5px;
+}
+
+
+
+main .right .requests
+{
+    margin: 2rem 0;
+}
+main .right .requests > h3 
+{
+    color: var(--color-gray);
+    margin-bottom: 2rem;
+}
+main .right .requests  .request 
+{
+    background-color: var(--color-white);
+    margin-bottom: 1rem;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+main .right .request .profile-info
+{
+    display: flex;
+    gap: 1rem ;
+}
+main .right .request .profile-info h3 
+{
+    margin-bottom: .5rem;
+}
+
+main .right .request .profile-info span{
+    color: var(--color-gray);
+}
+main .right .request   button:last-of-type
+{
+    background-color: var(--color-light);
+}
+
+/*============================GLOBAL CALSSES=============================*/
+.hilight-message-box
+{
+    box-shadow: 0 0 40px var(--color-primary);
+}
+.colors-fonts-box
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40vw;
+    z-index: 15;
+    background-color: var(--color-white);
+    box-shadow: 0 0 3rem rgba(0,0,0,.3);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    text-align: center;
+    display: none;
+}
+.colors-fonts-box .close
+{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.colors-fonts-box h2 {
+    font-size: 1.3rem;
+}
+.colors-fonts-box p {
+    color: var(--color-gray);
+    font-size: .9rem;
+}
+.colors-fonts-box .fonts
+{
+    margin: 2rem 0;
+}
+.colors-fonts-box .fonts > div,
+.colors-fonts-box .colors > div
+
+{
+    background-color: var(--color-light);
+    width: 100%;
+    padding: var(--search-padding);
+    border-radius: var(--border-radius);
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 0 ;
+}
+.colors-fonts-box .fonts > div .line 
+{
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between  ;
+
+}
+.colors-fonts-box .fonts > div .line  span 
+{
+    transform: translateY(-7.5px);
+
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.colors-fonts-box .fonts > div .line  span.active 
+{
+    background-color:hsl(252,75%,60%);
+} 
+.colors-fonts-box .colors
+{
+    margin: 2rem 0;
+
+}
+.colors-fonts-box .colors >div
+{
+    justify-content: space-between;
+}
+.colors-fonts-box .colors >div  span
+{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.colors-fonts-box .colors >div  span.active
+{
+    border: 5px solid #fff;
+}
+
+.colors-fonts-box .colors >div  span:first-of-type
+{
+    background-color: hsl(252,75%,60%);
+}
+.colors-fonts-box .colors >div  span:nth-of-type(2)
+{
+    background-color:hsl(120,95%,65%) ;
+}
+
+.colors-fonts-box .colors >div  span:nth-of-type(3)
+{
+    background-color:hsl(0,95%,65%) ;
+}
+
+.colors-fonts-box .colors >div  span:nth-of-type(4)
+{
+    background-color:#2196f3 ;
+}
+
+.colors-fonts-box .colors >div  span:last-of-type
+{
+    background-color:#009688 ;
+}
+
+.colors-fonts-box .background .contain
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+.colors-fonts-box .background .contain > div 
+{
+    padding: 1rem  1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 200px;
+    transition: all 300ms ease;
+    opacity: 0.5;
+}
+.colors-fonts-box .background .contain > div.active 
+{
+    border: 1px solid var(--color-primary);
+    opacity: 1;
+} 
+
+.colors-fonts-box .background .contain > div span 
+{
+    display: block;
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--color-gray);
+}
+
+.colors-fonts-box .background .contain > div:first-of-type
+{
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+} 
+
+.colors-fonts-box .background .contain > div:nth-of-type(2)
+{
+    background-color:hsl(252,30%,17%) ;
+    color: #fff;
+} 
+
+
+.colors-fonts-box .background .contain > div:last-of-type
+{
+    background-color:hsl(252,30%,10%);
+    color: #fff;
+} 
+
+
+.overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.6);
+    z-index: 12;
+}
+
+/*====================== MEDIA QUERIES FOR TAPLET AN LABTOP==========================*/
+@media screen and (max-width:1200px) {
+    main .container
+    {
+        grid-template-columns: 5rem auto 30vw;
+        gap: 1rem;
+    }
+    main .container .left .left-heading
+    {
+        display: none;
+    }
+    .sidebar a > h4
+    {
+        display: none;
+    }
+    main .container .left .sidebar i
+    {
+        font-size: 2rem;
+    }
+    main .container .left label
+    {
+        display: none;
+    }
+    main .container .left .sidebar a.active, main .container .left .sidebar a:hover
+    {
+        border-top-left-radius:1rem ;
+        border-top-right-radius:1rem ;
+
+    }
+
+   
+}
+@media screen and (max-width:992px)
+{
+    main .container{
+        grid-template-columns: 0 auto 5rem;
+    }
+  main .left
+    {
+        grid-column: 3/4;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    main .middle
+    {
+        grid-column: 1/3;
+        z-index: -1;
+    }
+    main .right 
+    {
+        display: none;
+    }
+    .nav__container .search-middle-section
+    {
+        display: none;
+    }
+    .colors-fonts-box
+    {
+        width: 85vw;
+    }
+    main .container .left .sidebar .notifications-container
+    {
+        right: 7rem;
+    }
+    main .container .left .sidebar .notifications-container::before
+    {
+        left: calc(30rem - 1rem);
+    }
+}

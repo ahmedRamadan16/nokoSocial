@@ -880,7 +880,7 @@ main .right .request   button:last-of-type
     }
     .colors-fonts-box
     {
-        width: 85vw;
+        width: 100%;
     }
     main .container .left .sidebar .notifications-container
     {

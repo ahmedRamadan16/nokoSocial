@@ -890,4 +890,10 @@ main .right .request   button:last-of-type
     {
         left: calc(30rem - 1rem);
     }
+    main .middle .stories .story:nth-of-type(5),
+    main .middle .stories .story:nth-of-type(6)
+    {
+        display: none;
+    }
+
 }

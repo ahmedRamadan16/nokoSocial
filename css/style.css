@@ -759,10 +759,9 @@ main .right .request   button:last-of-type
 .colors-fonts-box .background .contain
 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
-
+    gap: 1rem;
 }
 .colors-fonts-box .background .contain > div 
 {
@@ -773,6 +772,14 @@ main .right .request   button:last-of-type
     width: 200px;
     transition: all 300ms ease;
     opacity: 0.5;
+}
+@media (max-width:767px)
+{
+.colors-fonts-box .background .contain > div 
+    {
+        width: fit-content;
+        padding: 1rem;
+    }
 }
 .colors-fonts-box .background .contain > div.active 
 {

@@ -20,7 +20,7 @@
 }
 ::-webkit-scrollbar
 {
-    width: 16px;
+    width: 1rem;
 }
 ::-webkit-scrollbar-track
 {
@@ -60,7 +60,7 @@ body{
 }
 .profile-img 
 {
-    width: 64px;
+    width: 4rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
@@ -79,7 +79,7 @@ img
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 300ms ease;
-    font-size: 15px;
+    font-size: 0.9rem;
     border: none;
 }
 .btn:hover 
@@ -127,7 +127,7 @@ img
 nav{
     background-color: var(--color-white);
     position: fixed;
-    padding: 14px 0 ;
+    padding: 0.7rem 0 ;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -163,7 +163,7 @@ nav{
     width: 30vw;
     background-color: transparent;
     color: var(--color-dark);
-    margin-left: 16px;
+    margin-left: 1rem;
     font-size: .9rem;
     border: none;
     outline: none;
@@ -200,27 +200,27 @@ main .container .left .left-heading
     border-radius: var(--card-border-radius);
     display: flex;
 align-items: center;
-gap: 24px;
+gap: 1.5rem;
 }
 main .container .left .left-heading p {
     color: var(--color-gray);
-    margin: 8px 0;
+    margin: .5rem 0;
 }
 main .container .left .sidebar
 {
-    margin: 16px 0;
+    margin: 1rem 0;
     border-radius: var(--card-border-radius);
     background-color: var(--color-white);
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 2rem;
 }
 main .container .left .sidebar a 
 {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 19px;
+    gap: 1.3rem;
     transition: all 300ms ease;
     cursor: pointer;
     padding: var(--card-padding) ;
@@ -241,7 +241,7 @@ main .container .left .sidebar a::before
 main .container .left .sidebar a:first-of-type:before
 {
 
-    border-top-left-radius:16px ;
+    border-top-left-radius:1rem ;
 
 }
 main .container .left .sidebar a.active,
@@ -250,7 +250,7 @@ main .container .left .sidebar a:hover
 {
     background-color:var(--color-light);
     color: var(--color-primary);
-    border-top-left-radius:16px ;
+    border-top-left-radius:1rem ;
 } 
 main .container .left .sidebar a.active::before
 {
@@ -265,24 +265,24 @@ main .sidebar a.notifications
 main .container .left .sidebar .notifications-container
 {
     position: absolute;
-    right: -512px;
-    width: 480px;
+    right: -32rem;
+    width: 30rem;
     top: 0;
     z-index: 5;
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    box-shadow: 0 0 48px ;
+    box-shadow: 0 0 3rem ;
     display: none;
 }
 main .container .left .sidebar .notifications-container::before
 {
     content: "";
     position: absolute;
-    left: -16px;
-    top: 14px;
-    width: 32px;
-    height: 32px;
+    left: -1rem;
+    top: .8rem;
+    width: 2rem;
+    height: 2rem;
     background-color: var(--color-white);
     transform: rotate(45deg);
 }
@@ -296,8 +296,8 @@ main .container .left .sidebar .notifications-container .notification
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 main .container .left .sidebar .notifications-container .notification  h4 
 {
@@ -307,7 +307,7 @@ main .container .left .sidebar .notifications-container .notification  h4
 main .container .left .sidebar .notifications-container .notification  h4 span:first-of-type
 {
     color: var(--color-dark);
-    margin-right:5px ;
+    margin-right:.3rem ;
 }
 
 main .container .left .sidebar .notifications-container .notification .time-accepted 
@@ -315,7 +315,7 @@ main .container .left .sidebar .notifications-container .notification .time-acce
     display: block;
     width: 100%;
     color: var(--color-gray);
-    margin-top: 6px;
+    margin-top: .4rem;
     font-size: .7rem;
 }
 main .container .left .sidebar  i 
@@ -331,7 +331,7 @@ main .container .left .sidebar  i small
     color: var(--color-white);
     font-size: .5rem;
     border-radius: var(--border-radius);
-    padding: 4px;
+    padding: .2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -339,7 +339,7 @@ main .container .left .sidebar  i small
 main .container .left   label
 {
     width: 100%;
-    padding: 14px ;
+    padding: .8rem ;
     text-align: center;
 }
 
@@ -348,25 +348,25 @@ main .middle .stories
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
 }
 main .middle .stories .story 
 {
     position: relative;
-    width: 100px
+    width: 6.25rem
    
 }
 main .middle .stories .story .profile-img
 {
     position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 43.2px;
+    top: .5rem;
+    left: .5rem;
+    width: 2.7rem;
 }
 main .middle .stories .story span
 {
     position: absolute;
-    bottom: 16px;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     color: var(--color-white);
@@ -386,7 +386,7 @@ main .middle .search
     padding: var(--search-padding);
     border-radius: var(--border-radius);
     position: relative;
-    margin: 16px 0;
+    margin: 1rem 0;
 
 }
 main .middle .search input 
@@ -398,14 +398,14 @@ main .middle .search input
 }
 main .middle .search  label 
 {
-    padding: 16px 32px;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 main .middle .search .profile-img
 {
-    margin-right: 16px;
+    margin-right: 1rem;
 }
 main .middle .posts-container
 {
@@ -416,19 +416,19 @@ main .middle .posts-container .post
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
 }
 main .middle .posts-container .post .profile-info
 {
     width: 100%;
     display: flex;
-    gap: 16px;
+    gap: 1rem;
     align-items: flex-start;
 }
 main .middle .posts-container .post .profile-info .profile-img 
 {
-    width: 41.6px;
-    margin: 0 0 16px;
+    width: 2.6rem;
+    margin: 0 0 1rem;
 }
 
 main .middle .posts-container .post .profile-info .name span 
@@ -456,7 +456,7 @@ main .middle .posts-container .post .views-info
 {
     display: flex;
     justify-content: space-between;
-    margin: 16px 0;
+    margin: 1rem 0;
     font-size: 1.5rem;
 }
 main .middle .posts-container .post .views-info i 
@@ -467,7 +467,7 @@ main .middle .posts-container .data-info
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 1rem;
 }
 main .middle .posts-container .data-info .images 
 {
@@ -476,7 +476,7 @@ main .middle .posts-container .data-info .images
 }
 main .middle .posts-container .data-info .profile-img
 {
-    width: 20.8px;
+    width: 1.3rem;
 }
 main .middle .posts-container .data-info .profile-img:nth-of-type(2)
 {
@@ -491,14 +491,14 @@ main .middle .posts-container  .liked-sect
 {
     position: relative;
     font-size: .9rem;
-    left: -16px;
+    left: -1rem;
     color: var(--color-gray);
 
 }
 main .middle .posts-container  .liked-sect span
 {
     font-weight: bold;
-    margin: 0 .4.8px;
+    margin: 0 .3rem;
     color: var(--color-dark);
 }
 main .middle .posts-container .comment-info
@@ -508,7 +508,7 @@ main .middle .posts-container .comment-info
 main .middle .posts-container .comment-info .person-name 
 {
     font-weight: bold;
-    margin-right: 4.8px;
+    margin-right: .3rem;
     color: var(--color-dark);
 
 }
@@ -520,7 +520,7 @@ main .middle .posts-container .comment-info p
 main .middle .posts-container .comment-info span:last-of-type
 {
     display: block;
-    margin-top: 9.6px;
+    margin-top: .6rem;
 }
 main  .right .messages
 {
@@ -533,7 +533,7 @@ main  .right .messages .heading
     display: flex;
     justify-content: space-between;
     font-size: 1.3rem;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
 }
 
 main  .right .messages .search 
@@ -541,7 +541,7 @@ main  .right .messages .search
     background-color: var(--color-light);
     padding: var(--search-padding);
     border-radius: var(--border-radius);
-    margin-bottom:16px ;
+    margin-bottom:1rem ;
 }
 main  .right .messages .search input
 {
@@ -555,12 +555,12 @@ main .right .message-category
 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
     border-bottom: 4px solid var(--color-light);
 } 
 main .right .message-category h4
 {
-    padding: 32px 0;
+    padding: 2rem 0;
     cursor: pointer;
 }
 main .right .message-category h4.active
@@ -572,8 +572,8 @@ main .right .message
 {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 main .right .message .profile-img
 {
@@ -599,32 +599,32 @@ main .right .messages .message-container .message:nth-of-type(5) .profile-img::b
 
 main .right .requests
 {
-    margin: 32px 0;
+    margin: 2rem 0;
 }
 main .right .requests > h3 
 {
     color: var(--color-gray);
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
 }
 main .right .requests  .request 
 {
     background-color: var(--color-white);
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     display: flex;
-    gap: 16px;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
 main .right .request .profile-info
 {
     display: flex;
-    gap: 16px ;
+    gap: 1rem ;
 }
 main .right .request .profile-info h3 
 {
-    margin-bottom: 8px;
+    margin-bottom: .5rem;
 }
 
 main .right .request .profile-info span{
@@ -669,7 +669,7 @@ main .right .request   button:last-of-type
 }
 .colors-fonts-box .fonts
 {
-    margin: 32px 0;
+    margin: 2rem 0;
 }
 .colors-fonts-box .fonts > div,
 .colors-fonts-box .colors > div
@@ -679,11 +679,11 @@ main .right .request   button:last-of-type
     width: 100%;
     padding: var(--search-padding);
     border-radius: var(--border-radius);
-    height: 32px;
+    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 16px 0 0 ;
+    margin: 1rem 0 0 ;
 }
 .colors-fonts-box .fonts > div .line 
 {
@@ -711,7 +711,7 @@ main .right .request   button:last-of-type
 } 
 .colors-fonts-box .colors
 {
-    margin: 32px 0;
+    margin: 2rem 0;
 
 }
 .colors-fonts-box .colors >div
@@ -759,27 +759,20 @@ main .right .request   button:last-of-type
 .colors-fonts-box .background .contain
 {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
-    gap: 16px;
+    margin-top: 1rem;
+
 }
 .colors-fonts-box .background .contain > div 
 {
-    padding: 16px  24px;
+    padding: 1rem  1.5rem;
     display: flex;
     align-items: center;
     cursor: pointer;
     width: 200px;
     transition: all 300ms ease;
     opacity: 0.5;
-}
-@media (max-width:767px)
-{
-.colors-fonts-box .background .contain > div 
-    {
-        width: fit-content;
-        padding: 16px;
-    }
 }
 .colors-fonts-box .background .contain > div.active 
 {
@@ -790,7 +783,7 @@ main .right .request   button:last-of-type
 .colors-fonts-box .background .contain > div span 
 {
     display: block;
-    margin-right: 16px;
+    margin-right: 1rem;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -833,7 +826,7 @@ main .right .request   button:last-of-type
     main .container
     {
         grid-template-columns: 5rem auto 30vw;
-        gap: 16px;
+        gap: 1rem;
     }
     main .container .left .left-heading
     {
@@ -853,8 +846,8 @@ main .right .request   button:last-of-type
     }
     main .container .left .sidebar a.active, main .container .left .sidebar a:hover
     {
-        border-top-left-radius:16px ;
-        border-top-right-radius:16px ;
+        border-top-left-radius:1rem ;
+        border-top-right-radius:1rem ;
 
     }
 
@@ -863,7 +856,7 @@ main .right .request   button:last-of-type
 @media screen and (max-width:992px)
 {
     main .container{
-        grid-template-columns: 0 auto 80px;
+        grid-template-columns: 0 auto 5rem;
     }
   main .left
     {
@@ -891,11 +884,11 @@ main .right .request   button:last-of-type
     }
     main .container .left .sidebar .notifications-container
     {
-        right: 112px;
+        right: 7rem;
     }
     main .container .left .sidebar .notifications-container::before
     {
-        left: calc(480px - 16px);
+        left: calc(30rem - 1rem);
     }
     main .middle .stories .story:nth-of-type(5),
     main .middle .stories .story:nth-of-type(6)

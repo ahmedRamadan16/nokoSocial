@@ -196,6 +196,11 @@ main .container
     grid-template-columns: 18vw auto 20vw;
     gap: 2rem;
 }
+main .container .left {
+    box-shadow: 0 0 3rem rgba(0,0,0,.2);
+    height: fit-content;
+    padding-bottom: 1rem;
+}
 main .container .left .left-heading
 {
     background-color: var(--color-white);
@@ -352,6 +357,9 @@ main .middle .stories
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    box-shadow: 0  0 3rem rgba(0,0,0,.2);
+    padding: 1rem;
+    border-radius:var(--border-radius);
 }
 main .middle .stories .story 
 {
@@ -420,6 +428,7 @@ main .middle .posts-container .post
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-bottom: 2rem;
+    box-shadow: 0 0 3rem rgba(0,0,0,.2);
 }
 main .middle .posts-container .post .profile-info
 {
@@ -530,6 +539,7 @@ main  .right .messages
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
+    box-shadow:  0 0 3rem rgba(0,0,0,.2);
 }
 main  .right .messages .heading
 {
@@ -603,6 +613,9 @@ main .right .messages .message-container .message:nth-of-type(5) .profile-img::b
 main .right .requests
 {
     margin: 2rem 0;
+    box-shadow: 0 0 3rem rgba(0,0,0,.2);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
 }
 main .right .requests > h3 
 {
